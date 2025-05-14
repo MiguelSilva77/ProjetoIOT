@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: hsl(0, 0%, 80%);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#equipforno{
+    margin: 20px 40px 20px 40px;
+}
+
+#liga, #btemp, #btemp-, #btime,  #btime-{
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    margin: 10px;
+    border: solid 1px;
+}
+
+#btemp\+{
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    border: solid 1px;
+    /*background-color: hsl(241, 90%, 44%);*/
+
+}
+
+#btime\+{
+    width: 150px;
+    height: 75px;
+    border-radius: 10px;
+    border: solid 1px;
+
+}
+
+#temperatura{
+    width: 150px;
+    height: 50px;
+    font-size: large;
+    background-color: transparent;
+    border: solid 1px hsl(0, 50%, 0%);
+    border-radius: 10px;
+    text-align: center;
+    color: hsl(0, 50%, 0%);
+    padding-left: 15px;
+
+}
+
+#time{
+    width: 150px;
+    height: 50px;
+    font-size: large;
+    margin-left: 40px;
+    background-color: transparent;
+    border: solid 1px hsl(0, 50%, 0%);
+    border-radius: 10px;
+    text-align: center;
+    color: hsl(0, 50%, 0%);
+
+
+
+}
+

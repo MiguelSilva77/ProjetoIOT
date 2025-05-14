@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <h1>Página de teste</h1>
+
+    
+    <div id="equipforno">
+        <h3>Forno</h3>
+        <input type="button" id="liga" value="Liga/Desliga">
+        <span> </span>
+        <br>
+        Temperatura :
+        <input type="number" id="temperatura" disabled>
+        <input type="button" id="btemp" value="Config">
+        <j id="temp"></j><br>
+        Timer : 
+        <input type="text" id="time"  disabled>
+        <input type="button" id="btime" value="Config">
+        <j id="tempori"></j><br>
+        <input type="button" value="Histórico">
+
+    </div>
+
+    <div id="equip coifa">
+        <h3>Coifa</h3>
+        <input type="button" value="Liga/Desliga" id="coifa">
+        <input type="text" id="coifa1" value="desligado" disabled>
+    </div>
+
+    <div id="equip fritadeira">
+        <h3>Fritadeira</h3>
+        <input type="button" id="frita1" value="Liga/Desliga">
+        Temperatura
+        <input type="number"  id="frita3" disabled>
+        <input type="button" id="frita2" value="config">
+        <j id="frita"></j>
+
+    </div>
+    
+    <div id="luzes">
+        <h3>Luzes</h3>
+        Luz 1
+        <input type="button" id="luz1" value="Liga/desliga">
+        <input type="text" id="luz11" value="desligado" disabled><br>
+        Luz 2
+        <input type="button" id="luz2" value="Liga/desliga">
+        <input type="text" id="luz22" value="desligado" disabled><br>
+        Luz 3
+        <input type="button" id="luz3" value="Liga/desliga">
+        <input type="text" id="luz33" value="desligado" disabled><br>
+        Luz 4
+        <input type="button" id="luz4" value="Liga/desliga">
+        <input type="text" id="luz44" value="desligado" disabled><br>
+    </div>
+
+    <div id="Geladeiras">
+        <h3>Geladeiras</h3>
+        Geladeira 1 : 
+        Temperatura
+        <input type="number" id="g1" disabled>
+        <j id="g11"></j><br>
+        Geladeira 2 : 
+        Temperatura
+        <input type="number" id="g2"disabled>
+        <j id="g22"></j><br>
+        Geladeria 3 : 
+        Temperatura
+        <input type="number" id="g3" disabled>
+        <j id="g33"></j><br>
+
+    </div>
+
+    <script src="script1.js"></script> <!--script que controla funções de forno -->
+    <script src="script2.js"></script> <!--script que controla funções de coifa -->
+    <script src="script3.js"></script> <!--script que controla funções da fritadeira-->
+    <script src="script4.js"></script> <!--script que controla funções das luzes-->
+    <script src="script5.js"></script> <!--script que infroma informações das geladeiras-->
+
+    
+</body>
+</html>
