@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícone da aba do navegador -->
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="imagens/icon.png" alt="Ícone" class="icon">
+      <h1>SmartChef</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#">Entrar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login" aria-label="Seção de Login">
+      <h2>Ligar Forno</h2>
+      <form>
+        <label for="tempo">Minutos:</label>
+        <input 
+          type="number" 
+          id="tempo" 
+          name="tempo" 
+          placeholder="Digite o tempo em minutos" 
+          required 
+        />
+        <input type="button" class="button-integracao" id="integracao" value="Ligar Forno"/>
+        
+      </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SmartChef. Todos os direitos reservados.</p>
+    <p><a href="#politica">Política de Privacidade</a> · <a href="#termos">Termos de Uso</a></p>
+  </footer>
+  <script>
+    document.getElementById("integracao").addEventListener('click', async () => {
+      let tempo = document.getElementById("tempo").value
+      if(tempo > 0){
+        const response = await fetch(`https://api.thingspeak.com/update?api_key=N9M0DKSFQDXT6JMG&field1=${tempo}`).then(response => response.json())
+        console.log(response)
+        if (response) {
+          alert("Forno ligado por " + tempo + " minutos")
+        } else {
+          alert("Erro ao ligar o forno")
+        }
+      } else {
+        alert("Digite um tempo válido")
+      }
+    })
+  </script>
+</body>
+</html>

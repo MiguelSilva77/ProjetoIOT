@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícone da aba do navegador -->
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="imagens/icon.png" alt="Ícone" class="icon">
+      <h1>SmartChef</h1>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="#">Entrar</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+     <section id="login" aria-label="Seção de Login">
+      <h2>Login</h2>
+      <form onsubmit="fazerLogin(event)">
+        <label for="email">Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Digite seu email" 
+          required 
+        />
+
+        <label for="password">Senha:</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Digite sua senha" 
+          required 
+        />
+
+        <button type="submit">Entrar</button>
+        <p id="mensagem-erro"></p>
+      </form>
+
+      <a href="cad.html">Ainda não tem conta? Cadastre-se</a>
+    </section>
+
+    <section id="conteudo-logado">
+      <section id="solicitar-solucao">
+  <h3>Transforme sua Cozinha com SmartChef</h3>
+  <form id="form-solucao" onsubmit="enviarSolicitacao(event)">
+    <label for="nome">Nome do Representante:</label>
+    <input type="text" id="nome" name="nome" placeholder="Ex: João da Silva" required />
+    <label for="empresa">Nome da Empresa:</label>
+    <input type="text" id="empresa" name="empresa" placeholder="Ex: Cozinha XYZ Ltda" required />
+
+    <label for="segmento">Segmento da Cozinha:</label>
+    <select id="segmento" name="segmento" required>
+      
+      <option selected>Selecione</option>
+      <option value="restaurante">Restaurante</option>
+      <option value="escola">Cozinha Escolar</option>
+      <option value="hospital">Hospitalar</option>
+      <option value="outros">Outros</option>
+    </select>
+
+    <label for="infraestrutura">Descrição da Estrutura Atual:</label>
+    <textarea id="infraestrutura" name="infraestrutura" rows="4" placeholder="Quantos fornos, fogões, sensores já instalados, rede disponível..."></textarea>
+
+    <label for="objetivo">Objetivos com IoT/IA:</label>
+    <textarea id="objetivo" name="objetivo" rows="4" placeholder="Ex: Monitoramento remoto, redução de desperdício, manutenção preditiva..."></textarea>
+   <label for="grupo">Selecione o Nivel do Plano</label>
+    <select name="grupo" id="">
+      <option value="" selected>Selecione o que deseja</option>
+      <option value="bronze">Plano Bronze</option>
+      <option value="silver">Plano Silver</option>
+      <option value="gold">Plano Gold</option>
+    </select>
+
+    <button type="submit">Solicitar Proposta</button>
+    <p id="mensagem-solucao"></p>
+  </form>
+</section>
+
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 SmartChef. Todos os direitos reservados.</p>
+    <p><a href="#politica">Política de Privacidade</a> · <a href="#termos">Termos de Uso</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
